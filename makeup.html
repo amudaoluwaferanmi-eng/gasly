@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GASLY — High Fashion</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="clothes-page">
+<header class="header">
+  <a href="index.html" class="logo">
+    <img src="gasly.png" alt="GASLY Logo">
+</a>
+    <div class="header-right">
+        <button id="darkToggle">Theme</button>
+<div class="menu-toggle" id="menuToggle">
+    ☰
+</div>
+
+<a href="cart.html" class="cart-icon" id="cartIcon">
+    🛒 <span id="cartCount">0</span>
+</a>
+
+<nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="clothes.html">Clothes</a>
+    <a href="makeup.html">Makeup</a>
+</nav>
+    </div>
+</header>
+<div id="notification">Added to cart</div>
+
+
+<!-- PRODUCTS -->
+<section class="products reveal">
+    <div class="section-header">
+        <h2>Skin Beauty</h2>
+    </div>
+    <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="makeup">Makeup</button>
+    <button class="filter-btn" data-filter="skincare">Skincare</button>
+    <button class="filter-btn" data-filter="haircare">Haircare</button>
+    <button class="filter-btn" data-filter="frag">Fragrance</button>
+</div>
+    <div class="product-grid">
+
+        <div class="product-card skincare">
+          <a href="product.html">
+            <img src="skincare.png">
+            </a>
+            <h4>Gram Set</h4>
+            <p>₦180</p>
+        </div>
+
+        <div class="product-card skincare">
+          <a href="product.html">
+            <img src="soft.png">
+            </a>
+            <h4>Glow Kit</h4>
+            <p>₦220</p>
+        </div>
+    <div class="product-card makeup">
+      <a href="product.html">
+            <img src="brush.jpg">
+            </a>
+            <h4>GASLY Beauty Blenders</h4>
+            <p>₦180</p>
+        </div>
+    <div class="product-card makeup">
+      <a href="product.html">
+            <img src="lipkit1.png">
+            </a>
+            <h4>GASLY Matte Liquid Lipstick</h4>
+            <p>₦220</p>
+        </div>
+
+<div class="product-card haircare">
+  <a href="product.html">
+            <img src="set3.png">
+            </a>
+            <h4>Hair glam Set</h4>
+            <p>₦180</p>
+        </div>
+    <div class="product-card frag">
+      <a href="product.html">
+            <img src="perfume1.png">
+            </a>
+            <h4>Minimal Eau De Parfum</h4>
+            <p>₦220</p>
+        </div>
+
+<div class="product-card frag">
+  <a href="product.html">
+            <img src="perfume.png">
+            </a>
+            <h4>GASLY Body Perfume</h4>
+            <p>₦180</p>
+        </div>
+    <div class="product-card makeup">
+      <a href="product.html">
+            <img src="makeup3.png">
+            </a>
+            <h4>GASLY Makeup Brushes</h4>
+            <p>₦220</p>
+        </div>
+
+<div class="product-card makeup">
+  <a href="product.html">
+            <img src="led1.jpg">
+            </a>
+            <h4>GASLY Led Mirror</h4>
+            <p>₦180</p>
+        </div>
+    <div class="product-card makeup">
+      <a href="product.html">
+            <img src="foundation1.jpg">
+            </a>
+            <h4>Makeup Brush Collection</h4>
+            <p>₦220</p>
+        </div>
+    <div class="product-card makeup">
+      <a href="product.html">
+            <img src="foundation.jpg">
+            </a>
+            <h4>Kabuki Brush</h4>
+            <p>₦220</p>
+        </div>
+        </div>
+</section>
+
+<section class="products reveal">
+    <div class="section-title">
+        <h3>Disclaimer:</h3> 
+        <h4>This is not an existing brand website. This is used for project display only by the developer; AFCREATIVE DESIGN</h4>
+        <p> This website is still under developement</p>
+        </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <h3>GASLY</h3>
+            <p>Modern luxury fashion for bold individuals.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Stay Updated</h4>
+            <input type="email" placeholder="Enter your email">
+            <button>Subscribe</button>
+        </div>
+
+        <div class="footer-col">
+            <h4>Information</h4>
+            <a href="#">About Us</a>
+            <a href="#">Shipping</a>
+            <a href="#">Returns</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Policies</h4>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 GASLY. All rights reserved.
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+function addToCart() {
+    let name = "Classic Dress";  // Change per product
+    let price = 120;             // Change per product
+    let size = document.querySelector("select").value;
+    let color = document.querySelectorAll("select")[1].value;
+    let quantity = parseInt(document.querySelector("input").value);
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({
+        name: name,
+        price: price,
+        size: size,
+        color: color,
+        quantity: quantity
+    });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    showNotification();
+    updateCartCount();
+}
+
+function showNotification() {
+    let note = document.createElement("div");
+    note.innerText = "Added to cart";
+    note.style.position = "fixed";
+    note.style.bottom = "20px";
+    note.style.right = "20px";
+    note.style.background = "black";
+    note.style.color = "white";
+    note.style.padding = "10px 20px";
+    note.style.borderRadius = "5px";
+
+    document.body.appendChild(note);
+
+    setTimeout(() => {
+        note.remove();
+    }, 2000);
+}
+
+function updateCartCount() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let count = 0;
+
+    cart.forEach(item => {
+        count += item.quantity;
+    });
+
+    let cartCount = document.getElementById("cart-count");
+    if (cartCount) {
+        cartCount.innerText = count;
+    }
+}
+
+updateCartCount();
+</script>
+</body>
+</html>
