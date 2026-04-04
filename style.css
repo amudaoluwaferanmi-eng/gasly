@@ -156,6 +156,7 @@ html {
     cursor: pointer;
     position: relative;
     font-size: 20px;
+    text-decoration:none;
 }
 
 #cartCount {
@@ -219,6 +220,15 @@ html {
     letter-spacing: 1px;
 }
 
+.theme-btn {
+    margin-top: 3px;
+    padding: 8px 10px;
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer;
+}
+
 .primary-btn {
     margin-top: 20px;
     padding: 12px 28px;
@@ -229,6 +239,7 @@ html {
     letter-spacing: 1px;
     cursor: pointer;
     transition: 0.3s ease;
+    text-decoration:none;
 }
 
 .primary-btn:hover {
